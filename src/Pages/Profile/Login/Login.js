@@ -25,7 +25,7 @@ const Login = () => {
                     email: user.email
                 }
                 console.log(currentUser);
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://car-doctor-server-nine.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -58,7 +58,7 @@ const Login = () => {
                     email: user.email
                 }
                 console.log(currentUser);
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://car-doctor-server-nine.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

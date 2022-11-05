@@ -8,7 +8,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        fetch(`https://car-doctor-server-nine.vercel.app/orders?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('user-token')}`
             }
@@ -43,7 +43,7 @@ const Orders = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/orders/${id}`, {
+                fetch(`https://car-doctor-server-nine.vercel.app/orders/${id}`, {
                     method: 'DELETE',
                     headers: {
                         authorization: `Bearer ${localStorage.getItem('user-token')}`
@@ -79,7 +79,7 @@ const Orders = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/orders/${id}`, {
+                fetch(`https://car-doctor-server-nine.vercel.app/orders/${id}`, {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json',
